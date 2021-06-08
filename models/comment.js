@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectSchema = new mongoose.Schema({
+const commentSchema = new mongoose.Schema({
     content: {
         type: String,
         required: true
@@ -15,10 +15,10 @@ const connectSchema = new mongoose.Schema({
         ref:'Post'
     }
 
-}{
+},{
     timestamps:true
 }
 );
 
-const Comment = mongoose.model('Comment',connectSchema);
+const Comment = mongoose.model('Comment',commentSchema);
 module.exports = Comment;
